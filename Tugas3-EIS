@@ -1,0 +1,45 @@
+ 
+/* Program Membuat Melodi Dengan Buzzer dibuat oleh Indobot */
+
+byte buzzer = 9;              //Inisialisasi buzzer di pin D9
+
+void setup() {
+  pinMode(buzzer, OUTPUT);    //Setting sebagai output
+}
+
+void loop() {
+  Do();delay(500); Re();delay(500); Mi();delay(500); Fa();delay(500);
+  Sol();delay(500); La();delay(500); Si();delay(500); DO();delay(500);
+  Diam();delay(1000);
+  DO();delay(500); Si();delay(500); La();delay(500); Sol();delay(500); 
+  Fa();delay(500); Mi();delay(500); Re();delay(500); Do();delay(500);
+  Diam();delay(1000);
+}
+
+void Do(){
+  tone(buzzer,262); //Frekuensi nada DO
+}
+void Re(){
+  tone(buzzer,294);
+}
+void Mi(){
+  tone(buzzer,330);
+}
+void Fa(){
+  tone(buzzer,349);
+}
+void Sol(){
+  tone(buzzer,395);
+}
+void La(){
+  tone(buzzer,440);
+}
+void Si(){
+  tone(buzzer,494);
+}
+void DO(){
+  tone(buzzer,523);
+}
+void Diam(){
+  noTone(buzzer);
+}
